@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.buttons {
+  font-size: 14px;
+  padding: 10px;
+  margin: 3em;
+  font-weight: 600;
+}
+
+input {
+  width: 80%;
+  height: 36px;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
