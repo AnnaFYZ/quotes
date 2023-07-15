@@ -11,9 +11,13 @@ function App() {
 
   useEffect(() => {fetch(`https://anna-quote-server.glitch.me/${fetchValue}`)
   .then(res => res.json())
-  .then(data => {
-    setQuote(data);
-    setFetchValue("");})}, [fetchValue]) 
+  .then(data => setQuote(data))}, [fetchValue]) 
+
+  function randomQuote () {
+    fetch(`https://anna-quote-server.glitch.me/quotes/random`)
+  .then(res => res.json())
+  .then(data => setQuote(data))
+  }
 
   return (
     <div className="App">
@@ -44,7 +48,7 @@ function App() {
             <button
               name="randomQuote"
               className="buttons"
-              onClick={() => setFetchValue("quotes/random")}
+              onClick={() => randomQuote()}
             >
               Get random quote
             </button>
